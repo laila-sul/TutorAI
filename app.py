@@ -38,7 +38,7 @@ ADMIN_PASSWORD = "admin123"
 # LLM API calls
 def call_groq_llm(prompt, max_tokens=800):
     try:
-        api_key = st.secrets.get("GROQ_API_KEY", "")
+        api_key = st.secrets.get("GROQ_API_KEY", "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")
         if not api_key:
             return None
         response = requests.post("https://api.groq.com/openai/v1/chat/completions",
@@ -431,3 +431,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
